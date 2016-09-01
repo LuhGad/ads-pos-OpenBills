@@ -8,6 +8,8 @@ package ads.pos.openBill.SOAP.entidades;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,12 +37,13 @@ public class ReceitaCandidato implements Serializable {
     private String SG_UF_DOADOR;
     private String Nome_DOADOR;
     private float Valor_RECEITA;
-    private String TP_RECURSO;
+    @Enumerated(EnumType.STRING)
+    private TipoDeRecursoENUM TP_RECURSO;
 
     public ReceitaCandidato() {
     }
 
-    public ReceitaCandidato(String SG_UF, String Sigla_PART, String Nome_CAND, int Numero_CAND, Date Data_RECEITA, String CD_CPF_CGC, String SG_UF_DOADOR, String Nome_DOADOR, float Valor_RECEITA, String TP_RECURSO) {
+    public ReceitaCandidato(String SG_UF, String Sigla_PART, String Nome_CAND, int Numero_CAND, Date Data_RECEITA, String CD_CPF_CGC, String SG_UF_DOADOR, String Nome_DOADOR, float Valor_RECEITA, TipoDeRecursoENUM TP_RECURSO) {
         this.SG_UF = SG_UF;
         this.Sigla_PART = Sigla_PART;
         this.Nome_CAND = Nome_CAND;
@@ -133,12 +136,13 @@ public class ReceitaCandidato implements Serializable {
         this.Valor_RECEITA = Valor_RECEITA;
     }
 
-    public String getTP_RECURSO() {
+    public TipoDeRecursoENUM getTP_RECURSO() {
         return TP_RECURSO;
     }
 
-    public void setTP_RECURSO(String TP_RECURSO) {
+    public void setTP_RECURSO(TipoDeRecursoENUM TP_RECURSO) {
         this.TP_RECURSO = TP_RECURSO;
     }
+
 
 }

@@ -8,6 +8,8 @@ package ads.pos.openBill.SOAP.entidades;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -34,12 +36,13 @@ public class ReceitaComite implements Serializable {
     private String SG_UF_DOADOR;
     private String NO_DOADOR;
     private float VR_RECEITA;
-    private String TP_RECURSO;
+    @Enumerated(EnumType.STRING)
+    private TipoDeRecursoENUM TP_RECURSO;
 
     public ReceitaComite() {
     }
 
-    public ReceitaComite(String SG_UF, String SG_PART, String DS_ORGAO, Date DT_RECEITA, String CD_CPF_CGC_DOA, String SG_UF_DOADOR, String NO_DOADOR, float VR_RECEITA, String TP_RECURSO) {
+    public ReceitaComite(String SG_UF, String SG_PART, String DS_ORGAO, Date DT_RECEITA, String CD_CPF_CGC_DOA, String SG_UF_DOADOR, String NO_DOADOR, float VR_RECEITA, TipoDeRecursoENUM TP_RECURSO) {
         this.SG_UF = SG_UF;
         this.SG_PART = SG_PART;
         this.DS_ORGAO = DS_ORGAO;
@@ -123,12 +126,14 @@ public class ReceitaComite implements Serializable {
         this.VR_RECEITA = VR_RECEITA;
     }
 
-    public String getTP_RECURSO() {
+    public TipoDeRecursoENUM getTP_RECURSO() {
         return TP_RECURSO;
     }
 
-    public void setTP_RECURSO(String TP_RECURSO) {
+    public void setTP_RECURSO(TipoDeRecursoENUM TP_RECURSO) {
         this.TP_RECURSO = TP_RECURSO;
     }
+
+    
 
 }
