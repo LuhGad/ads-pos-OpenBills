@@ -25,6 +25,8 @@ public class DespesaCandidato implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    private String SEQUENCIAL_CANDIDATO;
+    private String SG_UF;
     private String NO_CAND;
     private String DS_CARGO;
     private int NR_CAND;
@@ -40,7 +42,9 @@ public class DespesaCandidato implements Serializable {
     public DespesaCandidato() {
     }
 
-    public DespesaCandidato(String NO_CAND, String DS_CARGO, int NR_CAND, String SG_UE_SUPERIOR, String SG_PART, Double VR_DESPESA, Date DT_DESPESA, String DS_TITULO, String NM_FORNECEDOR, String CD_CPF_CNPJ_FORNECEDOR) {
+    public DespesaCandidato(String SEQUENCIAL_CANDIDATO, String SG_UF, String NO_CAND, String DS_CARGO, int NR_CAND, String SG_UE_SUPERIOR, String SG_PART, Double VR_DESPESA, Date DT_DESPESA, String DS_TITULO, String NM_FORNECEDOR, String CD_CPF_CNPJ_FORNECEDOR) {
+        this.SEQUENCIAL_CANDIDATO = SEQUENCIAL_CANDIDATO;
+        this.SG_UF = SG_UF;
         this.NO_CAND = NO_CAND;
         this.DS_CARGO = DS_CARGO;
         this.NR_CAND = NR_CAND;
@@ -59,6 +63,22 @@ public class DespesaCandidato implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getSEQUENCIAL_CANDIDATO() {
+        return SEQUENCIAL_CANDIDATO;
+    }
+
+    public void setSEQUENCIAL_CANDIDATO(String SEQUENCIAL_CANDIDATO) {
+        this.SEQUENCIAL_CANDIDATO = SEQUENCIAL_CANDIDATO;
+    }
+
+    public String getSG_UF() {
+        return SG_UF;
+    }
+
+    public void setSG_UF(String SG_UF) {
+        this.SG_UF = SG_UF;
     }
 
     public String getNO_CAND() {
@@ -140,10 +160,5 @@ public class DespesaCandidato implements Serializable {
     public void setCD_CPF_CNPJ_FORNECEDOR(String CD_CPF_CNPJ_FORNECEDOR) {
         this.CD_CPF_CNPJ_FORNECEDOR = CD_CPF_CNPJ_FORNECEDOR;
     }
-    
-    
 
-    
-    
-    
 }

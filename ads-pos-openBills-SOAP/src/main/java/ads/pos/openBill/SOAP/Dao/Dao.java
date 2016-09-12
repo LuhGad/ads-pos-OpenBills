@@ -9,6 +9,14 @@ package ads.pos.openBill.SOAP.Dao;
  *
  * @author Luciana
  */
-public class Dao {
-    
+public interface Dao {
+
+    public void salvar(Object o);
+
+    public void remover(Object o);
+
+    public void atualizar(Object o);
+
+    public Object buscar(Class classe, Object object);
+
 }
