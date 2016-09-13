@@ -35,14 +35,20 @@ public class MainConection {
             Connection c = DriverManager.getConnection(url, user, password);
 
             String strFile = "C:\\Users\\lucia\\Desktop\\prestacao_contas_2002\\2002\\Candidato\\Receita\\ReceitaCandidato.csv";
+            String strFile1 = "C:\\Users\\lucia\\Desktop\\prestacao_contas_2002\\2002\\Candidato\\Despesa\\DespesaCandidato.csv";
+            String strFile2 = "C:\\Users\\lucia\\Desktop\\prestacao_contas_2002\\2002\\Comitê\\Despesa\\DespesaComite.CSV";
+            String strFile3 = "C:\\Users\\lucia\\Desktop\\prestacao_contas_2002\\2002\\Comitê\\Receita\\ReceitaComite.csv";
             CSVReader reader = new CSVReader(new FileReader(strFile), ';');
+            CSVReader reader1 = new CSVReader(new FileReader(strFile1), ';');
+            CSVReader reader2 = new CSVReader(new FileReader(strFile2), ';');
+            CSVReader reader3 = new CSVReader(new FileReader(strFile3), ';');
 
             List<String[]> linhaReceita = new ArrayList();
-            
             String[] nextLine;
-            while((nextLine = reader.readNext()) != null){
-                //System.out.println(nextLine.length);
+            while((nextLine = reader3.readNext()) != null){
+//                System.out.println(nextLine.length);
                 linhaReceita.add(nextLine);
+//            System.out.println(linhaReceita.size());
                 if(linhaReceita.size() > 999){
                     new ThreadReceitaCandidato2002(linhaReceita, c).run();
                     linhaReceita = new ArrayList<>();

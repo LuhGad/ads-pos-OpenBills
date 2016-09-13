@@ -34,7 +34,10 @@ public class ThreadReceitaCandidato2002 extends Thread{
             for (String[] l : lista) {
                 nextLine = l;                
                 //String[] split = nextLine[0].split(";");                
-                String sql = "INSERT INTO receitas_Candidato2002 VALUES"
+//                String sql = "INSERT INTO receitas_Candidato2002 VALUES"
+   //             String sql = "INSERT INTO despesa_Candidato2002 VALUES"
+      //          String sql = "INSERT INTO despesa_Comite2002 VALUES"
+                String sql = "INSERT INTO receitas_Comite2002 VALUES"
                         + "('" + nextLine[0].replaceAll("'", "") + "'"
                         + ",'" + nextLine[1].replaceAll("'", "") + "'"
                         + ",'" + nextLine[2].replaceAll("'", "") + "'"
@@ -43,10 +46,10 @@ public class ThreadReceitaCandidato2002 extends Thread{
                         + ",'" + nextLine[5].replaceAll("'", "") + "'"
                         + ",'" + nextLine[6].replaceAll("'", "") + "'"
                         + ",'" + nextLine[7].replaceAll("'", "") + "'"
-                        + ",'" + nextLine[8].replaceAll("'", "") + "'"
-                        + ",'" + nextLine[9].replaceAll("'", "") + "'"
-                        + ",'" + nextLine[10].replaceAll("'", "") + "'"
-                        + ",'" + nextLine[11].replaceAll("'", "") + "')";
+                        + ",'" + nextLine[8].replaceAll("'", "") + "')";
+//                        + ",'" + nextLine[9].replaceAll("'", "") + "'"
+//                        + ",'" + nextLine[10].replaceAll("'", "") + "'"
+//                        + ",'" + nextLine[11].replaceAll("'", "") + "')";
                 //System.out.println(sql);
                 con.prepareStatement(sql).executeUpdate();
                 
