@@ -6,7 +6,7 @@ CREATE TABLE despesa_Comite2002(
  DT_DOC_DESP varchar(255),
  CD_CPF_CGC varchar(255),
  SG_UF_FORNECEDOR varchar(255),
- NO_FOR varchar(255),
+ NO_FOR text,
  VR_DESPESA varchar(255),
  DS_TITULO varchar(255)
 

@@ -26,17 +26,15 @@ public class ReceitaCandidato implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-//
-    private String SEQUENCIAL_CANDIDATO;
+
     private String SG_UF;
     private String SG_PART;
-    private String DS_CARGO ;
+    private String DS_CARGO;
     private String NO_CAND;
     private int NR_CAND;
     @Temporal(TemporalType.DATE)
     private Date DT_RECEITA;
     private String CD_CPF_CGC;
-    private String SG_UF_DOADOR;
     private String NO_DOADOR;
     private float VR_RECEITA;
     @Enumerated(EnumType.STRING)
@@ -45,8 +43,8 @@ public class ReceitaCandidato implements Serializable {
     public ReceitaCandidato() {
     }
 
-    public ReceitaCandidato(String SEQUENCIAL_CANDIDATO, String SG_UF, String SG_PART, String DS_CARGO, String NO_CAND, int NR_CAND, Date DT_RECEITA, String CD_CPF_CGC, String SG_UF_DOADOR, String NO_DOADOR, float VR_RECEITA, TipoDeRecursoENUM TP_RECURSO) {
-        this.SEQUENCIAL_CANDIDATO = SEQUENCIAL_CANDIDATO;
+    public ReceitaCandidato(String SG_UF, String SG_PART, String DS_CARGO, String NO_CAND, int NR_CAND, Date DT_RECEITA, String CD_CPF_CGC, String NO_DOADOR, float VR_RECEITA, TipoDeRecursoENUM TP_RECURSO) {
+
         this.SG_UF = SG_UF;
         this.SG_PART = SG_PART;
         this.DS_CARGO = DS_CARGO;
@@ -54,7 +52,7 @@ public class ReceitaCandidato implements Serializable {
         this.NR_CAND = NR_CAND;
         this.DT_RECEITA = DT_RECEITA;
         this.CD_CPF_CGC = CD_CPF_CGC;
-        this.SG_UF_DOADOR = SG_UF_DOADOR;
+
         this.NO_DOADOR = NO_DOADOR;
         this.VR_RECEITA = VR_RECEITA;
         this.TP_RECURSO = TP_RECURSO;
@@ -66,14 +64,6 @@ public class ReceitaCandidato implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getSEQUENCIAL_CANDIDATO() {
-        return SEQUENCIAL_CANDIDATO;
-    }
-
-    public void setSEQUENCIAL_CANDIDATO(String SEQUENCIAL_CANDIDATO) {
-        this.SEQUENCIAL_CANDIDATO = SEQUENCIAL_CANDIDATO;
     }
 
     public String getSG_UF() {
@@ -132,14 +122,6 @@ public class ReceitaCandidato implements Serializable {
         this.CD_CPF_CGC = CD_CPF_CGC;
     }
 
-    public String getSG_UF_DOADOR() {
-        return SG_UF_DOADOR;
-    }
-
-    public void setSG_UF_DOADOR(String SG_UF_DOADOR) {
-        this.SG_UF_DOADOR = SG_UF_DOADOR;
-    }
-
     public String getNO_DOADOR() {
         return NO_DOADOR;
     }
@@ -163,8 +145,5 @@ public class ReceitaCandidato implements Serializable {
     public void setTP_RECURSO(TipoDeRecursoENUM TP_RECURSO) {
         this.TP_RECURSO = TP_RECURSO;
     }
-
-    
-    
 
 }

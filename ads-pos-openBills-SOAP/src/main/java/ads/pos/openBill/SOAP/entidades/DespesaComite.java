@@ -31,7 +31,7 @@ public class DespesaComite implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date DT_DOC_DESP;
     private String CD_CPF_CGC;
-    private String SG_UF_FORNECEDOR;
+
     private String NO_FOR;
     private String VR_DESPESA;
     private String DS_TITULO;
@@ -39,13 +39,12 @@ public class DespesaComite implements Serializable {
     public DespesaComite() {
     }
 
-    public DespesaComite(String SG_UF, String SG_PART, String DS_ORGAO, Date DT_DOC_DESP, String CD_CPF_CGC, String SG_UF_FORNECEDOR, String NO_FOR, String VR_DESPESA, String DS_TITULO) {
+    public DespesaComite(String SG_UF, String SG_PART, String DS_ORGAO, Date DT_DOC_DESP, String CD_CPF_CGC, String NO_FOR, String VR_DESPESA, String DS_TITULO) {
         this.SG_UF = SG_UF;
         this.SG_PART = SG_PART;
         this.DS_ORGAO = DS_ORGAO;
         this.DT_DOC_DESP = DT_DOC_DESP;
         this.CD_CPF_CGC = CD_CPF_CGC;
-        this.SG_UF_FORNECEDOR = SG_UF_FORNECEDOR;
         this.NO_FOR = NO_FOR;
         this.VR_DESPESA = VR_DESPESA;
         this.DS_TITULO = DS_TITULO;
@@ -97,14 +96,6 @@ public class DespesaComite implements Serializable {
 
     public void setCD_CPF_CGC(String CD_CPF_CGC) {
         this.CD_CPF_CGC = CD_CPF_CGC;
-    }
-
-    public String getSG_UF_FORNECEDOR() {
-        return SG_UF_FORNECEDOR;
-    }
-
-    public void setSG_UF_FORNECEDOR(String SG_UF_FORNECEDOR) {
-        this.SG_UF_FORNECEDOR = SG_UF_FORNECEDOR;
     }
 
     public String getNO_FOR() {

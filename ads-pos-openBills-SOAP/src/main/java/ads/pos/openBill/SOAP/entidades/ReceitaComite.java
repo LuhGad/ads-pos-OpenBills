@@ -33,7 +33,6 @@ public class ReceitaComite implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date DT_RECEITA;
     private String CD_CPF_CGC_DOA;
-    private String SG_UF_DOADOR;
     private String NO_DOADOR;
     private float VR_RECEITA;
     @Enumerated(EnumType.STRING)
@@ -42,13 +41,12 @@ public class ReceitaComite implements Serializable {
     public ReceitaComite() {
     }
 
-    public ReceitaComite(String SG_UF, String SG_PART, String DS_ORGAO, Date DT_RECEITA, String CD_CPF_CGC_DOA, String SG_UF_DOADOR, String NO_DOADOR, float VR_RECEITA, TipoDeRecursoENUM TP_RECURSO) {
+    public ReceitaComite(String SG_UF, String SG_PART, String DS_ORGAO, Date DT_RECEITA, String CD_CPF_CGC_DOA, String NO_DOADOR, float VR_RECEITA, TipoDeRecursoENUM TP_RECURSO) {
         this.SG_UF = SG_UF;
         this.SG_PART = SG_PART;
         this.DS_ORGAO = DS_ORGAO;
         this.DT_RECEITA = DT_RECEITA;
         this.CD_CPF_CGC_DOA = CD_CPF_CGC_DOA;
-        this.SG_UF_DOADOR = SG_UF_DOADOR;
         this.NO_DOADOR = NO_DOADOR;
         this.VR_RECEITA = VR_RECEITA;
         this.TP_RECURSO = TP_RECURSO;
@@ -102,13 +100,6 @@ public class ReceitaComite implements Serializable {
         this.CD_CPF_CGC_DOA = CD_CPF_CGC_DOA;
     }
 
-    public String getSG_UF_DOADOR() {
-        return SG_UF_DOADOR;
-    }
-
-    public void setSG_UF_DOADOR(String SG_UF_DOADOR) {
-        this.SG_UF_DOADOR = SG_UF_DOADOR;
-    }
 
     public String getNO_DOADOR() {
         return NO_DOADOR;
